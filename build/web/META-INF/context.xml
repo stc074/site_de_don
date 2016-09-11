@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/don">
+        <Resource name="jdbc/MyDB" auth="Container" type="javax.sql.DataSource"
+               maxActive="100000" maxIdle="100000" maxWait="10000"
+               username="log_don" password="theclash" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/base_don?autoConnect=true"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm"
+  dataSourceName="jdbc/MyDB"
+  localDataSource="true"
+  digest="MD5"
+  roleNameCol="role"
+  userCredCol="password"
+  userNameCol="name"
+  userRoleTable="roles"
+  userTable="users"/>
+</Context>
